@@ -1,0 +1,17 @@
+name: first run in Github Actions
+
+on: push
+
+jobs:
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Say Hello
+      run: echo "Hello GA"
+  echo-fail:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Failed step
+      run: |
+        echo "step fail"
+        exit 1
