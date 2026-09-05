@@ -1,0 +1,15 @@
+name: Github Events
+
+on: 
+    push:
+    pull_request:
+    schedule:
+        - cron: '*/5 * * * *'
+    workflow_dispatch: 
+
+jobs:
+    echo: 
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Show the trigger
+              run: echo "Run the event ${{ github.event_name }}"  
